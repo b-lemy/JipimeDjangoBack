@@ -10,6 +10,7 @@ markdown = "*"
 django-filter = "*"
 django-cors-headers = "*"
 pillow = "*"
+mysqlclient = "*"
 
 [dev-packages]
 
