@@ -11,6 +11,8 @@ django-filter = "*"
 django-cors-headers = "*"
 pillow = "*"
 mysqlclient = "*"
+pyodbc = "*"
+mssql-django = "*"
 
 [dev-packages]
 

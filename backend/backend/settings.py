@@ -93,7 +93,18 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": ""
 
-    }
+    },
+    'second_db': {
+        'ENGINE': 'mssql',
+        'NAME': "Trial",
+        'USER': "lema",
+        'PASSWORD': "Calvin123#",
+        'HOST': "LEMA\SQLEXPRESS",
+        'PORT': "",
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+        },
+    },
 }
 
 # Password validation

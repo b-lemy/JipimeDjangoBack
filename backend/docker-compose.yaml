@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  backend:
+    container_name: jumuiya-service
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+#    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+    volumes:
+      - .:/app
+    depends_on:
+      - backend-db
+
+  backend-db:
+    container_name: jumuiya-db
+    image: mysql:5.7.22
+    restart: always
+    environment:
+      MYSQL_DATABASE:
+      MYSQL_USER:
+      MYSQL_PASSWORD:
+    volumes:
+      - .dbdata:/var/lib/mysql
+
+
